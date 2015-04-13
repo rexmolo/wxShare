@@ -14,3 +14,6 @@
         imgUrl:"http://img3.douban.com/view/movie_poster_cover/spst/public/p2166127561.jpg"
     }
     wsShare.register(wxRegister);
+
+====
+    微信分享回调是异步请求,在处理是否分享成功应在外部处理.
