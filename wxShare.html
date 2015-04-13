@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+　　　　<meta name="format-detection" content="telephone=no" />
+        <link href="http://static.dface.cn/css/ratchet.min.css" rel="stylesheet"/>
+        <title>微信分API</title>        
+        <style type="text/css">
+            html,body{ font-family: "Microsoft Yahei";  -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; -o-user-select: none;user-select: none; }
+        </style>
+    </head>
+    <body>
+        <!--<button id="closeWindow" class="btn btn_primary">closeWindow</button>-->
+        <!--<button id="chooseImage" class="btn btn_primary">chooseImage</button>-->
+        <!--<img src="" class="viewimg" alt="" />-->
+        <!--<img src="" class="viewimg" alt="" />-->
+        <!--<img src="" class="viewimg" alt="" />-->
+        <script src="http://static.dface.cn/js/jquery-2.1.1.js"></script>
+        <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+        <script src="http://static.dface.cn/js/wsShare.js"></script>
+        <script>
+            $(function(){
+                var wxRegister = {
+                    url:"http://webtest.dface.cn/share/wxShare.html",
+                    title:"互联网之子",
+                    desc:"在长大的过程中，我才慢慢发现，我身边的所有事，别人跟我说的所有事，那些所谓本来如此，注定如此的事，它们其实没有非得如此，事情是可以改变的。更重要的是，有些事既然错了，那就该做出改变。",
+                    link:"http://movie.douban.com/subject/25785114/",
+                    imgUrl:"http://img3.douban.com/view/movie_poster_cover/spst/public/p2166127561.jpg"
+                }
+                wsShare.register(wxRegister);
+            })
+        </script>
+    </body>
+</html>
