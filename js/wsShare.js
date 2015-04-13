@@ -128,7 +128,7 @@ var wsShare = {
         wsShare.xmlhttp.send();
     },
     register:function(wxRegister){
-        wsShare.loadXMLDoc(‘url’+wxRegister.url,function(){
+        wsShare.loadXMLDoc(‘url’+wxRegister.url,function(){//发送请求的URL
             if(wsShare.xmlhttp.readyState == 1){
                 console.log("正在加载~");
             }else if(wsShare.xmlhttp.readyState == 2){
