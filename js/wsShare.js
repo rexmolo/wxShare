@@ -2,7 +2,7 @@ var wsShare = {
     wxconfig:function(wxconfig,wxRegister){
         wx.config({
             debug: false,
-            appId: 'wx3f44f37038103ff2',
+            appId: 'Id',//公众号APPID
             timestamp: wxconfig.timestamp,
             nonceStr: wxconfig.noncestr,
             signature: wxconfig.signature,
@@ -128,7 +128,7 @@ var wsShare = {
         wsShare.xmlhttp.send();
     },
     register:function(wxRegister){
-        wsShare.loadXMLDoc("http://dface.cn/wxjs?Access-Control-Allow-Origin=1&url="+wxRegister.url,function(){
+        wsShare.loadXMLDoc(‘url’+wxRegister.url,function(){
             if(wsShare.xmlhttp.readyState == 1){
                 console.log("正在加载~");
             }else if(wsShare.xmlhttp.readyState == 2){
