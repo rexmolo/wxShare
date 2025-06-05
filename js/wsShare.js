@@ -119,25 +119,25 @@ var wsShare = {
     xmlHttp:null,
     loadXMLDoc:function(url,func){
         if(window.XMLHttpRequest){
-            wsShare.xmlhttp = new XMLHttpRequest();
+            wsShare.xmlHttp = new XMLHttpRequest();
         }else{
-            wsShare.xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+            wsShare.xmlHttp = new ActiveXObject("Microsoft.XMLHTTP");
         }
-        wsShare.xmlhttp.open("GET",url,true);
-        wsShare.xmlhttp.onreadystatechange = func;
-        wsShare.xmlhttp.send();
+        wsShare.xmlHttp.open("GET",url,true);
+        wsShare.xmlHttp.onreadystatechange = func;
+        wsShare.xmlHttp.send();
     },
     register:function(wxRegister){
-        wsShare.loadXMLDoc(‘url’+wxRegister.url,function(){//发送请求的URL
-            if(wsShare.xmlhttp.readyState == 1){
+        wsShare.loadXMLDoc('url'+wxRegister.url,function(){//发送请求的URL
+            if(wsShare.xmlHttp.readyState == 1){
                 console.log("正在加载~");
-            }else if(wsShare.xmlhttp.readyState == 2){
+            }else if(wsShare.xmlHttp.readyState == 2){
                 console.log("加载完毕~");
-            }else if(wsShare.xmlhttp.readyState == 3){
+            }else if(wsShare.xmlHttp.readyState == 3){
                 console.log("正在处理~");
-            }else if(wsShare.xmlhttp.readyState == 4 && wsShare.xmlhttp.status== 200){
+            }else if(wsShare.xmlHttp.readyState == 4 && wsShare.xmlHttp.status== 200){
                 var data = {};
-                data = JSON.parse(wsShare.xmlhttp.responseText);
+                data = JSON.parse(wsShare.xmlHttp.responseText);
                 wsShare.wxconfig(data,wxRegister);
             }else{
                 alert("请求失败!");
